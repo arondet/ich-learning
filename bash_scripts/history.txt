@@ -1,0 +1,15 @@
+   1 git clone https://github.com/arondet/wh_linux_12.git
+   2  cd wh_linux_12
+   3  git checkout -b feature
+   4  echo "## My Project" > README.md
+   5  echo "Some changes in feature branch" >> README.md
+   6  echo "*.log" >> .gitignore
+   7  git add README.md .gitignore
+   8  git commit -m "Updated README and gitignore in feature branch"
+   9  git push -u origin feature
+   10  git commit --amend -m "Updated README and gitignore in feature branch ammend"
+   11  git push --force origin feature
+   12  git checkout main
+   13  git merge feature
+   14  git push origin main
+   15  history > history.txt
